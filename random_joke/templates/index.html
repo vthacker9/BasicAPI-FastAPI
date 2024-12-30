@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator | Daily Laughs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="static/src/css/main.css" rel="stylesheet">
+    <script src="static/src/js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <span class="floating-emoji emoji-1">😆</span>
+        <span class="floating-emoji emoji-2">😂</span>
+        <span class="floating-emoji emoji-3">🤣</span>
+        <span class="floating-emoji emoji-4">😅</span>
+
+        <h1>Daily Dose of Laughter</h1>
+        <div class="joke-container">
+            <div class="loader"></div>
+            <div class="joke-content">
+                <p class="setup">{{ joke.setup }}</p>
+                <p class="punchline">{{ joke.punchline }}</p>
+            </div>
+        </div>
+        <button onclick="fetchNewJoke()" class="refresh-button">Next Joke</button>
+    </div>
+
+    <audio id="laughSound" preload="auto">
+        <source src="/static/laugh.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
